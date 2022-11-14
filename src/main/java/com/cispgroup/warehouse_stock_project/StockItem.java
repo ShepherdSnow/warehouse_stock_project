@@ -6,17 +6,18 @@ public class StockItem {
     private String name;
     private double price;
     private int quantity;
-
+    private Location location;
     // constructor
     /**
      * @param name
      * @param price
      * @param quantity
      */
-    public StockItem(String name, double price, int quantity) {
+    public StockItem(String name, double price, int quantity,Location location) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
+        this.location = location;
     }
 
     /**
