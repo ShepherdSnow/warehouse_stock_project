@@ -12,6 +12,7 @@ public class StockItem {
      * @param name
      * @param price
      * @param quantity
+     * @param location
      */
     public StockItem(String name, double price, int quantity,Location location) {
         this.name = name;

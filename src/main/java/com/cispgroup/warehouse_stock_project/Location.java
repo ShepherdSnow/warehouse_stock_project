@@ -57,4 +57,9 @@ public class Location {
     public int getZ(){
         return z;
     }
+    @Override
+    public String toString() {
+
+        return getX() + ", " + getY() + ", " + getZ();
+    }
 }
