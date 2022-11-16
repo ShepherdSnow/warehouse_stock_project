@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.TextFlow?>
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            prefHeight="400.0" prefWidth="600.0"
+            id="pane"
+            fx:controller="com.cispgroup.warehouse_stock_project.gui.HomeScreen">
+
+    <left>
+        <GridPane hgap="16"
+                  vgap="4">
+            <Button text="Search" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <Button text="New Stock Item" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        </GridPane>
+    </left>
+    <center>
+        <TextFlow fx:id="flow"
+                  style="-fx-background-color: white; -fx-border-width: 2; -fx-border-color: black; -fx-padding: 4 4 4 4;">
+            <BorderPane.margin>
+                <Insets topRightBottomLeft="5"/>
+            </BorderPane.margin>
+            <Text fx:id="outputText" text="Printed response here . . ." />
+        </TextFlow>
+    </center>
+
+</BorderPane>
+
+
