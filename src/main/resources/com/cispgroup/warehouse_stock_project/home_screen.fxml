@@ -20,6 +20,7 @@
                   vgap="4">
             <Button text="Search" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
             <Button text="New Stock Item" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField promptText="Search Box..." GridPane.rowIndex="3" GridPane.columnIndex="0"/>
         </GridPane>
     </left>
     <center>
