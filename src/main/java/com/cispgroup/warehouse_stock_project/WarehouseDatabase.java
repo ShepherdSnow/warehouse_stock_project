@@ -15,8 +15,22 @@ public class WarehouseDatabase {
     protected WarehouseDatabase() {
         //does nothing;
     }
-
-
-
-
+    /**
+     * @return items
+     */
+    public HashMap<String, StockItem> getItemsMap() {
+        return items;
+    }
+    /**
+     * @return names
+     */
+    public HashMap<String, Customer> getNamesMap() {
+        return names;
+    }
+    /**
+     * @return orders
+     */
+    public HashMap<String, Order> getOrdersMap() {
+        return orders;
+    }
 }
