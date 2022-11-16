@@ -25,7 +25,7 @@ tasks.withType(JavaCompile) {
 
 application {
     mainModule = 'com.cispgroup.warehouse_stock_project'
-    mainClass = 'com.cispgroup.warehouse_stock_project.HelloApplication'
+    mainClass = 'com.cispgroup.warehouse_stock_project.StartGUI'
 }
 
 javafx {

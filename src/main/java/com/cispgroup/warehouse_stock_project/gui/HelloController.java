@@ -1,4 +1,4 @@
-package com.cispgroup.warehouse_stock_project;
+package com.cispgroup.warehouse_stock_project.gui;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

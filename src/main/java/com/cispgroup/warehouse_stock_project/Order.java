@@ -10,9 +10,7 @@ public class Order {
 
     public Order(String date, Customer customer){
         this.date = date;
-        this.Customer = customer;
-
-
+        this.customer = customer;
     }
 
     public void setDate(String date){
@@ -20,7 +18,7 @@ public class Order {
     }
 
     public void setCustomer(Customer customer){
-        this.Customer = customer;
+        this.customer = customer;
     }
 
     public void setItems(StockItem items){

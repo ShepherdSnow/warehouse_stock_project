@@ -7,4 +7,6 @@ module com.cispgroup.warehouse_stock_project {
 
     opens com.cispgroup.warehouse_stock_project to javafx.fxml;
     exports com.cispgroup.warehouse_stock_project;
+    exports com.cispgroup.warehouse_stock_project.gui;
+    opens com.cispgroup.warehouse_stock_project.gui to javafx.fxml;
 }
