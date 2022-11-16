@@ -1,8 +1,14 @@
 package com.cispgroup.warehouse_stock_project;
 
 public class Location {
+
+    //warehouse location ROW
     private int x;
+
+    //warehouse location COLUMN
     private int y;
+
+    //warehouse location SHELF_HEIGHT
     private int z;
 
     /**

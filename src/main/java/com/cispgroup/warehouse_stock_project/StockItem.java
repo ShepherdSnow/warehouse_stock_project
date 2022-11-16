@@ -5,20 +5,17 @@ public class StockItem {
 
     private String name;
     private double price;
-    private int quantity;
     private Location location;
-    // constructor
+
     /**
      * @param name
      * @param price
-     * @param quantity
      * @param location
      */
-    public StockItem(String name, double price, int quantity,Location location) {
+    public StockItem(String name, double price, Location location) {
         this.name = name;
         this.price = price;
-        this.quantity = quantity;
-        this.location = location;
+        this.setLocation(location);
     }
 
     /**
@@ -36,13 +33,6 @@ public class StockItem {
     }
 
     /**
-     * @param quantity
-     */
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-    /**
      * @return the brand name.
      */
     public String getName() {
@@ -57,20 +47,21 @@ public class StockItem {
     }
 
     /**
-     * @return the item quantity.
-     */
-    public int getQuantity() {
-        return quantity;
-    }
-
-    /**
      * @return toString, returns items details with spaces to separate each
      *         item.
      */
     @Override
     public String toString() {
 
-        return getName() + " " + getPrice() + " " + getQuantity();
+        return getName() + " " + getPrice();
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
     }
 }
 
