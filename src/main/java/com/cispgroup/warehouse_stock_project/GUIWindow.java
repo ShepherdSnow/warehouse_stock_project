@@ -12,6 +12,7 @@ import java.util.Objects;
 public class GUIWindow extends Application {
 
     private static Stage stage;
+    protected static final WarehouseDatabase database = new WarehouseDatabase();
 
     @Override
     public void start(Stage stage) throws IOException {
