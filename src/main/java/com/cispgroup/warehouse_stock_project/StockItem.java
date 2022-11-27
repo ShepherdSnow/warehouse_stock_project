@@ -1,8 +1,12 @@
 package com.cispgroup.warehouse_stock_project;
 
-public class StockItem {
+import java.io.Serializable;
+import java.util.UUID;
+
+public class StockItem implements Serializable {
     // Private variables
 
+    private UUID uuid = UUID.randomUUID();
     private String name;
     private double price;
     private Location location;
@@ -46,14 +50,13 @@ public class StockItem {
         return price;
     }
 
-    /**
-     * @return toString, returns items details with spaces to separate each
-     *         item.
-     */
+    public UUID getUuid() {
+        return uuid;
+    }
+
     @Override
     public String toString() {
-
-        return getName() + " " + getPrice();
+        return "name = " + name + "; price = $" + price + "; location = " + location + ";";
     }
 
     public Location getLocation() {

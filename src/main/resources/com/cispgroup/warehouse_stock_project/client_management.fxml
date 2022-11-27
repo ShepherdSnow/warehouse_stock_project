@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.TextFlow?>
+<?import javafx.scene.text.Text?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.cispgroup.warehouse_stock_project.gui.ClientManagementScreen"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <left>
+        <GridPane hgap="16"
+                  vgap="4">
+            <BorderPane.margin>
+                <Insets left="4"/>
+            </BorderPane.margin>
+            <HBox GridPane.rowIndex="1" GridPane.columnIndex="0" spacing="4">
+                <Button text="Search clients" onAction="#searchClients"/>
+                <TextField fx:id="searchTextField" promptText="keywords ..." />
+            </HBox>
+            <HBox GridPane.rowIndex="2" GridPane.columnIndex="0" spacing="4">
+                <Button text="Select client" onAction="#selectName"/>
+                <TextField fx:id="customerSelectionTextField" promptText="0" />
+            </HBox>
+            <Button onAction="#createItem" text="Create" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <Button onAction="#deleteItem" text="Delete" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+            <HBox GridPane.rowIndex="5" GridPane.columnIndex="0" spacing="4">
+                <Button text="Rename" onAction="#changeName"/>
+                <TextField fx:id="newNameTextField" promptText="New name..." />
+            </HBox>
+            <HBox GridPane.rowIndex="6" GridPane.columnIndex="0" spacing="4">
+                <Button text="Set address" onAction="#changeAddress"/>
+                <TextField fx:id="newAddressTextField" promptText="New name..." />
+            </HBox>
+            <HBox GridPane.rowIndex="7" GridPane.columnIndex="0" spacing="4">
+                <Button text="Set phone number" onAction="#changePhoneNumber"/>
+                <TextField fx:id="newPhoneNumberTextField" promptText="423-123-4567" />
+            </HBox>
+        </GridPane>
+    </left>
+
+    <bottom>
+        <Button text="Go back" onAction="#navigateUp" BorderPane.alignment="CENTER_LEFT">
+            <BorderPane.margin>
+                <Insets topRightBottomLeft="4"/>
+            </BorderPane.margin>
+        </Button>
+    </bottom>
+
+    <center>
+        <ScrollPane>
+            <content>
+                <TextFlow fx:id="flow"
+                          style="-fx-background-color: white; -fx-border-width: 2; -fx-border-color: black; -fx-padding: 4 4 4 4;" minWidth="332" minHeight="350">
+                    <BorderPane.margin>
+                        <Insets topRightBottomLeft="4"/>
+                    </BorderPane.margin>
+                    <Text fx:id="outputText" text="Printed response here . . ." />
+                </TextFlow>
+            </content>
+        </ScrollPane>
+    </center>
+
+</BorderPane>

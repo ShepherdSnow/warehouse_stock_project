@@ -18,19 +18,28 @@
     <left>
         <GridPane hgap="16"
                   vgap="4">
-            <Button text="Search" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
-            <Button text="New Stock Item" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
-            <TextField promptText="Search Box..." GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <BorderPane.margin>
+                <Insets left="4"/>
+            </BorderPane.margin>
+            <HBox GridPane.rowIndex="1" GridPane.columnIndex="0" spacing="4">
+                <Button text="Search" onAction="#search"/>
+                <TextField fx:id="searchTextField" promptText="blank for everything" />
+            </HBox>
+            <Button onAction="#gotoInventoryManagementScreen" text="Inventory Management" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <Button onAction="#gotoClientManagementScreen" text="Client Management" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <Button onAction="#gotoOrderManagementScreen" text="Order Management" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
         </GridPane>
     </left>
     <center>
-        <TextFlow fx:id="flow"
-                  style="-fx-background-color: white; -fx-border-width: 2; -fx-border-color: black; -fx-padding: 4 4 4 4;">
-            <BorderPane.margin>
-                <Insets topRightBottomLeft="5"/>
-            </BorderPane.margin>
-            <Text fx:id="outputText" text="Printed response here . . ." />
-        </TextFlow>
+        <ScrollPane>
+            <TextFlow fx:id="flow"
+                      style="-fx-background-color: white; -fx-border-width: 2; -fx-border-color: black; -fx-padding: 4 4 4 4;" minHeight="350" minWidth="350">
+                <BorderPane.margin>
+                    <Insets topRightBottomLeft="4"/>
+                </BorderPane.margin>
+                <Text fx:id="outputText" text="Printed response here . . ." />
+            </TextFlow>
+        </ScrollPane>
     </center>
 
 </BorderPane>
