@@ -5,16 +5,18 @@
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
-<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.cispgroup.warehouse_stock_project.gui.Login"
-      prefHeight="Infinity" prefWidth="Infinity">
-
-    <TextField fx:id="usernameField" promptText="Enter username . . ." text="gsnow" />
-    <TextField fx:id="passwordField" promptText="Enter password . . ." text="warehouseAdmin&amp;&amp;"/>
-
-    <Button fx:id="btn1" text="Login" onAction="#login"/>
-
-    <Label fx:id="failureLabel" text="" />
-
-</VBox>
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.cispgroup.warehouse_stock_project.gui.Login">
+    <center>
+        <VBox spacing="4">
+            <BorderPane.margin>
+                <Insets topRightBottomLeft="4"/>
+            </BorderPane.margin>
+            <TextField fx:id="usernameField" promptText="Enter username . . ." text="gsnow" />
+            <TextField fx:id="passwordField" promptText="Enter password . . ." text="warehouseAdmin&amp;&amp;"/>
+            <Button fx:id="btn1" text="Login" onAction="#login"/>
+            <Label fx:id="failureLabel" text="" />
+        </VBox>
+    </center>
+</BorderPane>
